@@ -1,0 +1,607 @@
+/* ==========================================
+   PORTFOLIO RESPONSIVE STYLES
+   Keep this file loaded AFTER style.css.
+   Do not duplicate the base styles from style.css.
+========================================== */
+
+/* Global safeguards */
+html {
+    scroll-padding-top: 90px;
+}
+
+body {
+    min-width: 320px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container,
+.row > * {
+    min-width: 0;
+}
+
+section[id] {
+    scroll-margin-top: 85px;
+}
+
+.hero-content,
+.about-content,
+.project-content,
+.publication-content,
+.timeline-content,
+.contact-form {
+    min-width: 0;
+}
+
+.hero-content h1,
+.hero-content h2,
+.section-title h2,
+.publication-content h3,
+.publication-info,
+.about-info li,
+.contact-box p,
+footer {
+    overflow-wrap: anywhere;
+}
+
+.hero-buttons,
+.project-buttons,
+.publication-buttons {
+    flex-wrap: wrap;
+}
+
+/* Decorative hero circles: centered behind the profile image */
+.hero-image {
+    isolation: isolate;
+}
+
+.circle-one,
+.circle-two {
+    pointer-events: none;
+}
+
+/* Large laptops and smaller desktops */
+@media (max-width: 1199.98px) {
+    .navbar-nav {
+        gap: 12px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(40px, 5vw, 58px);
+    }
+
+    .hero-image img {
+        width: min(100%, 380px);
+    }
+
+    .circle-one {
+        width: min(380px, 90%);
+        height: auto;
+        aspect-ratio: 1;
+        left: 50%;
+        margin-left: 0;
+        transform: translateX(-50%);
+    }
+
+    .circle-two {
+        width: min(300px, 72%);
+        height: auto;
+        aspect-ratio: 1;
+        top: 10%;
+        left: 50%;
+        margin-left: 0;
+        transform: translateX(-50%);
+    }
+}
+
+/* Bootstrap mobile/tablet navbar breakpoint */
+@media (max-width: 991.98px) {
+    .custom-navbar {
+        padding: 12px 0;
+    }
+
+    .navbar-brand {
+        font-size: 26px;
+    }
+
+    .navbar-collapse {
+        margin-top: 12px;
+        padding: 12px 16px;
+        background: rgba(10, 15, 25, 0.97);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 14px;
+        max-height: calc(100dvh - 90px);
+        overflow-y: auto;
+    }
+
+    .navbar-nav {
+        align-items: stretch;
+        gap: 2px;
+    }
+
+    .navbar-nav .nav-link {
+        display: block;
+        padding: 10px 4px;
+        font-size: 15px;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 125px;
+        padding-bottom: 60px;
+    }
+
+    .hero-content {
+        margin-bottom: 38px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(36px, 6vw, 52px);
+    }
+
+    .hero-content p {
+        max-width: 100%;
+        font-size: 16px;
+        margin-bottom: 28px;
+    }
+
+    .hero-image img {
+        width: min(100%, 340px);
+    }
+
+    .circle-one {
+        width: min(330px, 85%);
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    .circle-two {
+        width: min(260px, 68%);
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    section,
+    .about,
+    .skills,
+    .experience,
+    .projects,
+    .contact,
+    .publication {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .section-title {
+        margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+        font-size: clamp(30px, 4vw, 38px);
+    }
+
+    /* Single-column timeline on tablet and mobile */
+    .timeline {
+        max-width: 100%;
+    }
+
+    .timeline::before {
+        left: 20px;
+        transform: none;
+    }
+
+    .timeline-item,
+    .timeline-item.left,
+    .timeline-item.right {
+        width: 100%;
+        left: 0;
+        padding: 18px 0 18px 58px;
+        text-align: left;
+    }
+
+    .timeline-item.left::before,
+    .timeline-item.right::before,
+    .timeline-item::before {
+        left: 11px;
+        right: auto;
+    }
+
+    .timeline-content {
+        padding: 24px;
+    }
+
+    .publication-card {
+        gap: 24px;
+    }
+
+    .contact {
+        text-align: initial;
+    }
+
+    .contact-form {
+        margin-top: 0;
+    }
+}
+
+/* Phones */
+@media (max-width: 767.98px) {
+    .hero {
+        padding-top: 110px;
+        padding-bottom: 45px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(32px, 7vw, 44px);
+        line-height: 1.25;
+    }
+
+    .hero h2 {
+        font-size: clamp(21px, 5vw, 28px);
+        line-height: 1.4;
+        min-height: 0;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .hero-buttons {
+        gap: 12px;
+    }
+
+    .hero-buttons .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .hero-image img {
+        width: min(100%, 300px);
+        border-width: 4px;
+    }
+
+    .circle-one {
+        width: min(300px, 88%);
+    }
+
+    .circle-two {
+        width: min(240px, 70%);
+    }
+
+    .hero-card {
+        margin-top: 18px;
+        padding: 26px 18px;
+    }
+
+    .hero-card h3 {
+        font-size: clamp(26px, 6vw, 34px);
+    }
+
+    .section-title {
+        margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .section-title p {
+        font-size: 14px;
+    }
+
+    .about-content h3 {
+        font-size: 24px;
+    }
+
+    .about-info li {
+        margin-bottom: 12px;
+    }
+
+    .skill-card {
+        height: 100%;
+        padding: 26px 16px;
+    }
+
+    .skill-card i {
+        font-size: 44px;
+    }
+
+    .skill-card h4 {
+        font-size: 19px;
+    }
+
+    .timeline-content {
+        padding: 20px;
+    }
+
+    .timeline-content h4 {
+        font-size: 21px;
+    }
+
+    .project-card img {
+        height: auto;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+    }
+
+    .project-content {
+        padding: 20px;
+    }
+
+    .project-content h3 {
+        font-size: 21px;
+    }
+
+    .project-buttons,
+    .publication-buttons {
+        gap: 10px;
+    }
+
+    .project-buttons .btn,
+    .publication-buttons .btn {
+        flex: 1 1 100%;
+        width: 100%;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .publication-card {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 24px;
+        text-align: left;
+    }
+
+    .publication-icon {
+        margin: 0 auto;
+        width: 76px;
+        height: 76px;
+        min-width: 76px;
+        font-size: 30px;
+    }
+
+    .publication-content h3 {
+        font-size: 22px;
+        line-height: 1.45;
+    }
+
+    .publication-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 13px;
+    }
+
+    .contact-box {
+        padding: 20px;
+        gap: 14px;
+    }
+
+    .contact-box i {
+        flex: 0 0 48px;
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+
+    .contact-form {
+        padding: 24px;
+    }
+
+    .contact-form .form-control {
+        font-size: 16px;
+    }
+
+    footer h3 {
+        font-size: 25px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 575.98px) {
+    .container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    section,
+    .about,
+    .skills,
+    .experience,
+    .projects,
+    .contact,
+    .publication {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .hero {
+        padding-top: 100px;
+    }
+
+    .hero-tag {
+        max-width: 100%;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(29px, 8vw, 38px);
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .social-icons a {
+        width: 46px;
+        height: 46px;
+        font-size: 18px;
+    }
+
+    .section-title h2 {
+        font-size: 27px;
+    }
+
+    .timeline::before {
+        left: 14px;
+    }
+
+    .timeline-item,
+    .timeline-item.left,
+    .timeline-item.right {
+        padding-left: 42px;
+    }
+
+    .timeline-item.left::before,
+    .timeline-item.right::before,
+    .timeline-item::before {
+        left: 5px;
+    }
+
+    .timeline-content {
+        padding: 16px;
+    }
+
+    .project-content {
+        padding: 16px;
+    }
+
+    .project-content h3 {
+        font-size: 19px;
+    }
+
+    .tech-stack {
+        gap: 8px;
+    }
+
+    .tech-stack span {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .publication-card {
+        padding: 18px;
+    }
+
+    .publication-content h3 {
+        font-size: 19px;
+    }
+
+    .contact-box {
+        padding: 16px;
+        align-items: flex-start;
+    }
+
+    .contact-form {
+        padding: 16px;
+    }
+
+    .contact-form .form-control {
+        padding: 13px 14px;
+    }
+
+    .contact-form textarea {
+        min-height: 150px;
+    }
+
+    footer .footer-social {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+}
+
+/* Extra-small phones */
+@media (max-width: 360px) {
+    .container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .navbar-brand {
+        font-size: 23px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .section-title h2 {
+        font-size: 25px;
+    }
+
+    .timeline-item,
+    .timeline-item.left,
+    .timeline-item.right {
+        padding-left: 38px;
+    }
+
+    .timeline-content {
+        padding: 13px;
+    }
+
+    .publication-card {
+        padding: 14px;
+    }
+}
+
+/* Accessibility: respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .hero-image img,
+    .circle-one,
+    .circle-two {
+        animation: none !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+
+/* Keep the rotating circles centered while their transform is animated */
+@media (max-width: 991.98px) {
+    @keyframes rotate {
+        from { transform: translate(-50%, -50%) rotate(0deg); }
+        to   { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    @keyframes rotateReverse {
+        from { transform: translate(-50%, -50%) rotate(360deg); }
+        to   { transform: translate(-50%, -50%) rotate(0deg); }
+    }
+}
